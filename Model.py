@@ -12,5 +12,3 @@ def distribuicao_nominal(n,k,p,q):
     b=(p**k)*(q**(n-k))
     result=a*b
     print('P(X='+str(k)+')='+str(result))
-
-distribuicao_nominal(6,6,41/100,59/100)
