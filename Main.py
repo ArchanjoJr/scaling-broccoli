@@ -1,2 +1,3 @@
 from Model import distribuicao_nominal
-import tkinter
+
+distribuicao_nominal()
