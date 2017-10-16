@@ -35,8 +35,45 @@ def numero_classes(lista):
 
     '''
     :param lista:[]
-    :return: float
+    :return: int
     '''
 
     i = 1+ (3.3 * mat.log(len(lista), 10))
-    return i
+    return int(i+1)
+
+def amplitude_cla(lista):
+    """
+
+    :param lista:[]
+    :return: int
+    """
+    at = lista[len(lista)-1]-lista[0]
+    h = at/(numero_classes(lista))
+    return int(h+1)
+
+def probabilidade(a,s):
+    """
+    A = OCORRENCIA DO EVENTO
+    S = TOTALIDADE DO EVENTO
+    :param a:int, float
+    :param s: int,float
+    :return: int,float
+    """
+    return float(a/s)
+
+def probabilidadeE(pa,pb):
+    """
+
+    :param aA:int or float
+    :param sA:int or float
+    :param aB:int or float
+    :param sB:int or float
+    :return:int or float
+    """
+    return float(pa*pb)
+
+def probabilidadeU(pa,pb):
+    return float((pa+pb)-probabilidadeE(pa,pb))
+
+def probabilidadeC(pa,pb):
+    return float(probabilidadeE(pa,pb)/pb)
