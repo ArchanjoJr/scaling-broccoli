@@ -49,7 +49,7 @@ j1eb5.grid(row=4, column=1)
 j1eb6.grid(row=5, column=1)
 
 j1bt1.grid(row=6, column=1)
-#j1bt2.grid(row=6, column=1)
+j1bt2.grid(row=6, column=1)
 
 janela1.geometry("600x330+50+165")
 janela1.mainloop()
