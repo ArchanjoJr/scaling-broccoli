@@ -74,7 +74,15 @@ def probabilidadeE(pa,pb):
     return float(pa*pb)
 
 def probabilidadeU(pa,pb):
+    """
+    Retorna a PROBABILIDADE DE P(aᴗB)
+
+    """
     return float((pa+pb)-probabilidadeE(pa,pb))
 
 def probabilidadeC(pa,pb):
+    """
+    Retorna a PROBABILIDADE DE P(aᴖB)
+
+    """
     return float(probabilidadeE(pa,pb)/pb)
