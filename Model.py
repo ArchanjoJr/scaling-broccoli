@@ -65,10 +65,6 @@ def probabilidade(a,s):
 def probabilidadeE(pa,pb):
     """
 
-    :param aA:int or float
-    :param sA:int or float
-    :param aB:int or float
-    :param sB:int or float
     :return:int or float
     """
     return float(pa*pb)
