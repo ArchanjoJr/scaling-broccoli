@@ -18,16 +18,8 @@ menu.add_command(label='Distr. Nominal', command=dist)
 menu.add_command(label='Probabilidade',command=p)
 lbl_title = Label(master, text='', font=('italic', 20), justify=CENTER)
 lbl_title.pack()
-'''
-btn_top = Button(master, text='PROBABILIDADE', padx=10, pady=15, command=p)
-btn_top.pack(side=LEFT,anchor=N)
-btn_top = Button(master, text='DISTR. NOMINAL', padx=10, pady=15, command=dist)
-btn_top.pack(side=LEFT,anchor=NE)
-lbl_title = Label(master, text='', font=('italic', 20), justify=CENTER)
-lbl_title.pack()
-btn_close=Button(master,text='Close',command=master.quit)
+btn_close=Button(master, text='Close', command=master.quit)
 btn_close.pack(side=BOTTOM)
-'''
 master.mainloop()
 
 '''
