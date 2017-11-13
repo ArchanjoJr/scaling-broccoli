@@ -11,7 +11,7 @@ def env_dist():
 
 
 def dist():
-    lbl_title.config(text='Distribuiçao Nominal')
+    lbl_title.config(text='Distribuiçao Binominal')
     texto = ['N = ', 'K = ', 'P = ', 'Q = ']
     lbl_e.place_forget()
     for x in range(4):
@@ -27,7 +27,7 @@ master.title('Estatistica !')
 master.geometry('500x500')
 menu = Menu(master)
 master.config(menu=menu)
-menu.add_command(label='Distr. Nominal', command=dist)
+menu.add_command(label='Distr. Binominal', command=dist)
 lbl_title = Label(master, text='', font=('italic', 20), justify=CENTER)
 lbl_title.place(x=125)
 text_a = StringVar();text_b = StringVar();text_c = StringVar();text_d = StringVar();text_e = StringVar()
