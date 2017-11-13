@@ -14,12 +14,6 @@ def dist():
     Button(master, text='Calcular', command=env_dist, width=12).place(x=190, y=430)
 
 
-def p():
-    lbl_title.config(text='Probababilidade')
-    texto = ['A = ', 'S = ', 'P(a∪b) = ', 'P(a∩b) = ', 'P(a / b) = ']
-    for x in range(5):
-        obj[x].set(texto[x])
-    lbl_e.place(x=10, y=380)
 
 
 master = Tk()
@@ -28,7 +22,6 @@ master.geometry('500x500')
 menu = Menu(master)
 master.config(menu=menu)
 menu.add_command(label='Distr. Nominal', command=dist)
-menu.add_command(label='Probabilidade', command=p)
 lbl_title = Label(master, text='', font=('italic', 20), justify=CENTER)
 lbl_title.place(x=138)
 text_a = StringVar();text_b = StringVar();text_c = StringVar();text_d = StringVar();text_e = StringVar()
