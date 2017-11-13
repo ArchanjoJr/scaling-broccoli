@@ -9,18 +9,33 @@ def env_dist():
     Label(top,text="P(x = "+ent_b.get()+ ") = "+str(resultado*100)+"%",font=('helvetica')).place(x=30,y=110)
     Button(top,text="Close",command=top.destroy).place(x=130,y=221)
 
-
 def dist():
     lbl_title.config(text='Distribuiçao Binominal')
     texto = ['N = ', 'K = ', 'P = ', 'Q = ']
     lbl_e.place_forget()
-    for x in range(4):
+    for x in range(len(texto)):
         obj[x].set(texto[x])
+    lbl_d.place(x=10, y=300)
     ent_a.place(x=80, y=50)
     ent_b.place(x=80, y=130)
     ent_c.place(x=80, y=210)
     ent_d.place(x=80, y=300)
-    Button(master, text='Calcular', command=env_dist, width=12).place(x=190, y=430)
+    Button(master, text='Calculate', command=env_dist, width=12).place(x=150, y=430, width=200)
+
+def env_poisson():
+
+
+
+def poisson():
+    lbl_a.place(x=10, y=50);lbl_b.place(x=10, y=130);lbl_b.place(x=10, y=130)
+    ent_a.place(x=80, y=50);ent_b.place(x=80, y=130);ent_c.place(x=80, y=210)
+    lbl_d.place_forget();lbl_e.place_forget()
+    ent_d.place_forget();ent_e.place_forget()
+    lbl_title.config(text="Distribuição Poisson")
+    texto = ['X = ','λ = ','t = ']
+    for x in range(len(texto)):
+        obj[x].set(texto[x])
+    Button(master,text="Calculate",command=env_poisson).place(x=150,y=430,width=200)
 
 master = Tk()
 master.title('Estatistica !')
@@ -28,6 +43,7 @@ master.geometry('500x500')
 menu = Menu(master)
 master.config(menu=menu)
 menu.add_command(label='Distr. Binominal', command=dist)
+menu.add_command(label='Distr. Poisson', command = poisson)
 lbl_title = Label(master, text='', font=('italic', 20), justify=CENTER)
 lbl_title.place(x=125)
 text_a = StringVar();text_b = StringVar();text_c = StringVar();text_d = StringVar();text_e = StringVar()
