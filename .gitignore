@@ -8,3 +8,5 @@ reference.txt
 .idea/modules.xml
 .idea/workspace.xml
 __pycache__/
+.idea/scaling-broccoli.iml
+
