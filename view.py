@@ -6,6 +6,7 @@ def env_dist():
     top.geometry('300x250')
     top.title("Distribuição Binomial")
     resultado = distr_binom(float(ent_a.get()),float(ent_b.get()),float(ent_c.get()),float(ent_d.get()))
+    Label(top, text=" RESULTADO DA OPERAÇÃO ", font=("helvetica", 11, "bold")).place(x=40, y=70)
     Label(top,text="P(x = "+ent_b.get()+ ") = "+str(resultado*100)+"%",font=('helvetica')).place(x=30,y=110)
     Button(top,text="Close",command=top.destroy).place(x=130,y=221)
 
