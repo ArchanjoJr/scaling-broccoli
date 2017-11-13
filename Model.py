@@ -1,6 +1,6 @@
 import math as mat
-
-def distribuicao_nominal(n,k,p,q):
+from fractions import Fraction
+def distr_binom(n,k,p,q):
     """
     N= numero total de provas
     K= numero de vezes que se quer a ocorrencia
@@ -11,5 +11,4 @@ def distribuicao_nominal(n,k,p,q):
     a = mat.factorial(n)/(mat.factorial(k)*mat.factorial(n-k))
     b = (p**k) * (q**(n-k))
     result = a*b
-    print('P(X='+str(k)+')='+str(result))
     return result
