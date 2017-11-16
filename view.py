@@ -45,6 +45,67 @@ def poisson():
         obj[x].set(texto[x])
     Button(master,text="Calculate",command=env_poisson).place(x=150,y=430,width=200)
 
+def env_lesser():
+
+    top = Toplevel(master)
+    top.geometry('300x250')
+    top.title("Distribuição Normal")
+    resultado = distr_norm_lesser(float(ent_a.get()), float(ent_b.get()),float(ent_c.get()))
+    Label(top, text=" RESULTADO DA OPERAÇÃO ", font=("helvetica", 11, "bold")).place(x=40, y=70)
+    Label(top, text="P(x = " + ent_a.get() + ") = " + str(resultado * 100) + "%", font=('helvetica')).place(x=30, y=110)
+    Button(top, text="Close", command=top.destroy).place(x=130, y=221)
+
+def env_greater():
+    top = Toplevel(master)
+    top.geometry('300x250')
+    top.title("Distribuição Normal")
+    resultado = distr_norm_greater(float(ent_a.get()), float(ent_b.get()),float(ent_c.get()))
+    Label(top, text=" RESULTADO DA OPERAÇÃO ", font=("helvetica", 11, "bold")).place(x=40, y=70)
+    Label(top, text="P(x = " + ent_a.get() + ") = " + str(resultado * 100) + "%", font=('helvetica')).place(x=30, y=110)
+    Button(top, text="Close", command=top.destroy).place(x=130, y=221)
+
+def env_between():
+    top = Toplevel(master)
+    top.geometry('300x250')
+    top.title("Distribuição Normal")
+    resultado = distr_norm_between(float(ent_a.get()),float(ent_b.get()),float(ent_c.get()),float(ent_d.get()))
+    Label(top, text=" RESULTADO DA OPERAÇÃO ", font=("helvetica", 11, "bold")).place(x=40, y=70)
+    Label(top, text="P("+ent_a.get()+" < X <"+ ent_b.get()+" ) = " + str(resultado * 100) + "%", font=('helvetica')).place(x=30, y=110)
+    Button(top, text="Close", command=top.destroy).place(x=130, y=221)
+
+
+def norm_lesser():
+    lbl_title.config(text="Distribuição Normal")
+    lbl_d.place_forget();lbl_e.place_forget()
+    ent_d.place_forget();ent_e.place_forget()
+    texto =["Val = ","χ = ","δ = "]
+    for x in range(len(texto)):
+        obj[x].set(texto[x])
+    lbl_a.place(x=10, y=50);lbl_b.place(x=10, y=130);lbl_b.place(x=10, y=130)
+    ent_a.place(x=80, y=50);ent_b.place(x=80, y=130);ent_c.place(x=80, y=210)
+    Button(master, text="Calculate", command=env_lesser).place(x=150, y=430, width=200)
+
+def norm_greater():
+    lbl_title.config(text="Distribuição Normal")
+    lbl_d.place_forget();lbl_e.place_forget()
+    ent_d.place_forget();ent_e.place_forget()
+    texto = ["Val = ", "χ = ", "δ = "]
+    for x in range(len(texto)):
+        obj[x].set(texto[x])
+    lbl_a.place(x=10, y=50);lbl_b.place(x=10, y=130);lbl_b.place(x=10, y=130)
+    ent_a.place(x=80, y=50);ent_b.place(x=80, y=130);ent_c.place(x=80, y=210)
+    Button(master,text="Calculate",command=env_greater).place(x=150,y=430,width=200)
+
+def norm_between():
+    lbl_title.config(text="Distribuição Normal")
+    lbl_e.place_forget();ent_e.place_forget()
+    texto=["Val1 = ","Val2 = ","χ = ", "δ = "]
+    for x in range(len(texto)):
+        obj[x].set(texto[x])
+    lbl_a.place(x=10, y=50);lbl_b.place(x=10, y=130);lbl_b.place(x=10, y=130);lbl_d.place(x=10, y=300)
+    ent_a.place(x=80, y=50);ent_b.place(x=80, y=130);ent_c.place(x=80, y=210);ent_d.place(x=80, y=300)
+    Button(master, text="Calculate", command=env_between).place(x=150, y=430, width=200)
+
 master = Tk()
 master.title('Estatistica !')
 master.geometry('500x500')
@@ -52,6 +113,11 @@ menu = Menu(master)
 master.config(menu=menu)
 menu.add_command(label='Distr. Binominal', command=dist)
 menu.add_command(label='Distr. Poisson', command = poisson)
+cascade = Menu(menu, tearoff=0)
+cascade.add_command(label="P(X<V)",command=norm_greater)
+cascade.add_command(label="P(X>V)",command=norm_lesser)
+cascade.add_command(label="P(V1<X<v2)",command=norm_between)
+menu.add_cascade(label="Distr. Normal", menu=cascade)
 lbl_title = Label(master, text='', font=('italic', 20), justify=CENTER)
 lbl_title.place(x=125)
 text_a = StringVar();text_b = StringVar();text_c = StringVar();text_d = StringVar();text_e = StringVar()
