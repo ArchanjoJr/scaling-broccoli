@@ -1,72 +1,47 @@
-# Project Title
+# Scaling Broccoli
 
-One Paragraph of project description goes here
+A Simple Desktop Application, Made With Python 3  and Tkinter.
 
-## Getting Started
+## Prerequisites
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
+Just Make Sure you Have `Python3` and `pip3` On Your Local Machine: 
 
 ```
-Give examples
+sudo apt-get install python3
+
+sudo apt-get -y install pip3
 ```
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+Just Follow This Simple step-by-step to get the latest Version
 
-Say what the step will be
+1. Create a Folder:
+	`mkdir Folder-Name`
+2. Enter the Folder:
+	`cd Folder-name`
+3. Clone The repository:
+	`git clone https://github.com/ArchanjoJr/scaling-broccoli.git`
+4. Then Install the Dependencies:
+	`pip3 install -r requirements.txt`
 
+After this Steps You're Good to GO ! 
+
+PS: Executables for **Windows** and **Linux** are on their WAY ! XD
+## Usage
+
+Just Run the script:
 ```
-Give the example
+python3 view.py
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
 * [Python3.5](http://www.dropwizard.io/1.0.2/docs/) - Language Python.
 
-
-
 ## Authors
 
 * **Matheus 'ArchanjoJr'** - *Initial work* - [ArchanjoJr](https://github.com/ArchanjoJr)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
@@ -74,6 +49,4 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* A Huge Shout for my Boy **[William Moreira](https://github.com/willmoreira)** For The Amazing Patience and Help With Tkinter and GUI
