@@ -16,14 +16,14 @@ sudo apt-get -y install pip3
 
 Just Follow This Simple step-by-step to get the latest Version
 
-1. Create a Folder:
-	`mkdir Folder-Name`
-2. Enter the Folder:
-	`cd Folder-name`
-3. Clone The repository:
-	`git clone https://github.com/ArchanjoJr/scaling-broccoli.git`
-4. Then Install the Dependencies:
-	`pip3 install -r requirements.txt`
+1. Create a Folder:`mkdir Folder-Name`
+	
+2. Enter the Folder:`cd Folder-name`
+	
+3. Clone The repository:`git clone https://github.com/ArchanjoJr/scaling-broccoli.git`
+	
+4. Then Install the Dependencies:`pip3 install -r requirements.txt`
+
 
 After this Steps You're Good to GO ! 
 
@@ -34,7 +34,10 @@ Just Run the script:
 ```
 python3 view.py
 ```
-
+![Main](https://github.com/ArchanjoJr/scaling-broccoli/blob/master/pics/mainView.png)
+![Binomial](https://github.com/ArchanjoJr/scaling-broccoli/blob/master/pics/Binomial%20Distribution.png)
+![Normal](https://github.com/ArchanjoJr/scaling-broccoli/blob/master/pics/Normal%20Distribution.png)
+![Poisson](https://github.com/ArchanjoJr/scaling-broccoli/blob/master/pics/Python%20Distribution.png)
 ## Built With
 
 * [Python3.5](http://www.dropwizard.io/1.0.2/docs/) - Language Python.
